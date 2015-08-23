@@ -1,0 +1,43 @@
+
+
+.jumbotron {
+	background-color:#b03535 !important;
+}
+
+.jumbotron h1 {
+	color:#6ba39c;
+}
+
+.jumbotron h2 {
+	color: black;
+}
+
+#guessing {
+	background-color:#366d66 !important;
+	color: #c2d1ec !important;
+}
+
+#lives-left{
+	background-color:#4bdb5c !important;
+}
+
+body {
+	background-color:#d4e5e0;
+}
+
+#remaining {
+	border: 2px solid black !important;
+}
+
+#lives-left button{
+	margin-top: 50px;
+}
+
+img {
+	margin-top: 10px;
+}
+
+.col-xs-2 img {
+	height: 175px;
+	width: 150px;
+}
