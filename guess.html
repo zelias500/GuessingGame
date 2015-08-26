@@ -11,7 +11,7 @@
 	<div class="jumbotron">
 		<div class="container">
 			<div class="col-xs-12">
-				<span  class="text-info">
+				<span class="text-info">
 					<h1 class="text-center">GUESS THE NUMBER</h1>
 					<h2 class="text-center">Lava Edition<h2>
 				</span>
@@ -20,28 +20,37 @@
 	</div>
 
 	<div class="container center-block" id="guessing"> 
-		<img class="center-block" src="181_volcano.jpg" />
+		<div class="row">
+			<div class="col-xs-12">
+				<img class="img-responsive center-block mid lava" src="181_volcano.jpg" />
+				<img id="ocean" class="img-responsive center-block mid island" src="ocean2.jpg" />
+			</div>
+		</div>
 		<div class="row">
 			<div class="col-xs-2">
-				<img class="img-rounded img-responsive" src="lava.gif" />
+				<img class="img-rounded img-responsive lava" src="lava.gif" />
+				<img class="img-rounded img-responsive island" src="island.jpg" />
 			</div>
 			<div class="col-xs-8">
 				<h2 class="text-center">CAN YOU GUESS THE NUMBER TO ESCAPE THE LAVA?</h2>
-				<p class="lead text-center"> Enter a number...if you dare</p>
+				<p class="lead text-center challenge"> Enter a number...if you dare</p>
+				<p class="notify"></p>
 				<br />
 				<form class="text-center">
 					<div class="form-group row">
 						<div class="col-md-8">
-							<input name="userguess" class="form-control input-lg" placeholder="Enter a number 1-100"/>
+							<input id="userGuess" class="form-control input-lg" placeholder="Enter a number 1-100"/>
 						</div>
 						<div class="col-md-4">
-							<button type="submit" class="btn btn-success btn-lg" name="submitguess">SUBMIT GUESS</button>
+							<button type="submit" class="btn btn-success btn-lg" id="submitGuess">SUBMIT GUESS</button>
+							<p class="gList"></p>
 						</div>
 					</div>
 				</form>
 			</div>
 			<div class="col-xs-2">
-				<img class="img-rounded img-responsive" src="lava.gif" />
+				<img class="img-rounded img-responsive lava" src="lava.gif" />
+				<img class="img-rounded img-responsive island" src="island.jpg" />
 			</div>
 		</div>
 	</div>
@@ -51,14 +60,15 @@
 	<div class="container" id="lives-left">
 		<div class="row">
 				<div class="col-md-4">
-					<button type="button" class="btn btn-danger center-block">GIVE UP AND (START OVER)</button>
+					<button type="button" id='giveup' class="btn btn-danger center-block">START OVER</button>
 				</div>
 				<div class="col-md-4">
 					<h2 class="text-center">REMAINING GUESSES:</h2>
 					<h2 class="text-center" id="remaining">5</h2>
 				</div>
 				<div class="col-md-4" id="hint">
-					<button type="button" class="btn btn-primary center-block">I NEED A HINT</button>
+					<button id="hint" type="button" class="btn btn-primary center-block">I NEED A HINT</button>
+					<p id='hintText'></p>
 				</div>
 			</div>
 		</div>
@@ -66,5 +76,7 @@
 
 	<br />
 
+	<script src='js/jquery-1.11.3.min.js'></script>
+	<script src='guess.js'></script
 </body>
 </html>
