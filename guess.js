@@ -68,6 +68,10 @@ $(document).ready(function(){
 			$('.notify').text("YOU'VE ALREADY GUESSED THAT!");
 		}
 
+		else if (isNaN(guess) || +guess > 100 || +guess < 1){
+			$('.notify').text("INVALID INPUT");
+		}
+
 		else {
 			// add guess to list of guesses
 			guesses.push(guess);
